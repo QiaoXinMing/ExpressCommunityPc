@@ -1,0 +1,2359 @@
+/**** 	webSite:		Life Tips**	Author:			QiaoXinMing**	Copyright:		1.0*	*	Create Date:    3-1-2017**	Retrofit Date:  *******	*	Contact QQ:	    2586789239***/
+
+
+/*    ****		clear margin,padding**/
+
+html,
+body,
+object,
+iframe,
+sub,
+sup,
+div,
+canvas,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+form,
+table,
+caption,
+small,
+i,
+em,
+label,
+textarea,
+th,
+td,
+img,
+button,
+fieldset,
+input,
+select,
+hr,
+legend,
+audio,
+video,
+embed,
+a,
+b,
+strong,
+object,
+bgsound,
+section,
+aside,
+header,
+footer,
+nav {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+body {
+    -webkit-text-size-adjust: 100%;
+    /*chrome字体问题
+	-apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif
+	*/
+    -ms-text-size-adjust: 100%;
+    font: 14px/20px Microsoft Yahei, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #757575;
+    background: #f5f5f5;
+}
+
+
+/*    ****		default  style  font set**/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+em,
+i,
+div,
+showInfo {
+    font-weight: normal;
+    font-style: normal;
+}
+
+span,
+em,
+i,
+div,
+.showInfo {
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li,
+dt,
+dd {
+    float: left;
+    outline: none;
+}
+
+input,
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+input,
+button,
+select,
+textarea {
+    outline: none;
+    background: none;
+    resize: none;
+    color: #757575;
+}
+
+
+/*   ****		public style tag of a , img, video set **/
+
+a,
+a:link,
+a:visited,
+a:active,
+a:hover {
+    outline: none;
+    text-decoration: none;
+}
+
+a:focus,
+div:focus,
+button:foucs,
+button:foucs {
+    outline: none;
+}
+
+img,
+video {
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+}
+
+video {
+    object-fit: fill;
+    background: url('../images/background.png');
+}
+
+::-webkit-scrollbar {
+    opacity: 0;
+    width: 0;
+    display: none;
+}
+
+
+/*****		clear left&right set**/
+
+.clearfix {
+    display: block;
+    clear: both;
+}
+
+.clearfix::after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    line-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+
+/*****	  float   *****/
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.noleft,
+.noright {
+    float: none;
+}
+
+.middle {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+}
+.subMiddle{
+    width: 900px;
+}
+.flexAnimate {
+    transition: all .5s ease .5s;
+}
+
+#app,
+.repWidth,
+.hot-topic-title {
+    width: 100%;
+}
+
+a,
+.fc,
+::placeholder {
+    color: #008b8b;
+}
+
+.posrel {
+    position: relative;
+}
+
+.posabs {
+    position: absolute;
+}
+
+.bg {
+    background: #008b8b;
+}
+
+.hiddenNone {
+    display: none;
+}
+
+.bbs {
+    border-bottom: 1px dashed #008b8b;
+}
+
+.addMore {
+    display: block;
+    margin: 0 auto 10px;
+    cursor: pointer;
+    text-align: center;
+    width: 80px;
+    border-radius: 2px;
+    color: #f5f5f5;
+    letter-spacing: 2px;
+}
+
+.ht {
+    height: 25px;
+    line-height: 25px
+}
+
+.height {
+    height: 30px;
+    line-height: 30px;
+}
+
+.overflow {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.hotTag {
+    width: 1000px;
+}
+
+#app .loginRegistor .register .checkedInput {
+    border: 1px solid #008b8b;
+}
+
+
+/* header */
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 113px;
+    box-shadow: 0 0 10px #008b8b;
+    z-index: 99999;
+    background: #f5f5f5;
+}
+
+#header .loading {
+    height: 3px;
+    background: #008b8b;
+}
+
+#app .header {
+    margin-top: 3px;
+    font-size: 16px;
+}
+
+#app .header .topNavInfo {
+    width: 83.4%;
+    margin-top: 10px;
+    border-bottom: 1px solid #008b8b;
+}
+
+#app .header .topNavInfo .logo {
+    width: 160px;
+    height: 50px;
+    line-height: 50px;
+    text-indent: 15px;
+    font-size: 20px;
+    letter-spacing: 16px;
+}
+
+#app .header .topNavInfo .TopNavList {
+    width: 84%;
+}
+
+#app .header .topNavInfo .TopNavList .primaryNav ul li.active {
+    color: #008b8b;
+}
+
+#app .header .topNavInfo .TopNavList ul {
+    height: 50px;
+    line-height: 50px;
+}
+
+#app .header .topNavInfo .TopNavList ul li {
+    padding: 0 8px;
+    transition: color .5s ease .5s;
+}
+
+#app .header .topNavInfo .TopNavList ul li:hover {
+    color: #008b8b;
+}
+
+#app .header .hotTag .showInfo dd.active {
+    color: #008b8b;
+}
+
+#app .header .topNavInfo .TopNavList .searchInfo {
+    margin-top: 8px;
+}
+
+#app .header .topNavInfo .TopNavList .searchInfo .form {
+    height: 25px;
+    border: 2px solid #008b8b;
+    border-radius: 5px;
+}
+
+#app .header .topNavInfo .TopNavList .searchInfo .form input[type=text] {
+    width: 260px;
+    text-indent: 10px;
+}
+
+#app .header .topNavInfo .TopNavList .searchInfo .form input[type=text]:focus {
+    width: 24.125rem;
+}
+
+#app .header .topNavInfo .TopNavList .searchInfo .form input[type=button] {
+    right: 0;
+    height: 27px;
+    line-height: 28px;
+    letter-spacing: 5px;
+    border-left: 1px solid #008b8b;
+    padding-left: 5px;
+}
+
+#app .header .AppDown {
+    top: 8px;
+    right: 0;
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    font-size: 12px;
+}
+
+#app .header div.AppDown:last-child {
+    right: 93px;
+}
+
+#app .header .hotTag dl {
+    display: inline-block;
+    width: 930px;
+    height: 44px;
+    line-height: 44px;
+}
+
+#app .header .hotTag dl dd {
+    padding: 0 8px;
+}
+
+#app .header .hotTag dl dd:hover {
+    color: #008b8b;
+}
+
+#app .header .hotTag .navOverFlow {
+    width: 70px;
+    height: 44px;
+    line-height: 44px;
+    vertical-align: top;
+}
+
+#app .header .hotTag .navOverFlow label {
+    display: block;
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    color: #f5f5f5;
+}
+
+#app .header .showHotTag {
+    top: 44px;
+    left: 0;
+    width: 200px;
+    height: 30px;
+}
+
+#app .header .hotTag .navOverFlow:hover .showHotTag,
+#app .container .bannerSlide .bannerSlideWrapper li {
+    display: inline-block;
+}
+
+
+/*container*/
+
+#app .container {
+    margin-top: 136px;
+}
+#app .arctilePublishButton{
+  padding:0 15px;
+  width:auto;
+}
+#app .container .VideoDetailsLeft .title{
+    line-height:30px;
+    text-indent:15px;
+    opacity: 0;
+    z-index:9;
+    transition: all .5s ease .5s;
+}
+#app .container .VideoDetailsLeft:hover .title{
+    opacity: 1;
+}
+#app .container .autoSave{
+    margin-right:15px;
+}
+#app .loginRegistor {
+    min-height: 510px;
+    margin: 224px auto 160px;
+}
+#app .container .changeVideo{
+    width: 85px;
+    text-align: center;
+    background: #008b8b;
+    color: #fff;
+    border-radius: 5px;
+}
+#app .container .changeVideo .changeVideoInput{
+    opacity: 0;
+    width: 85px;
+    padding: 0;
+    top: 0;
+}
+#app .container .bannerSlide {
+    width: 680px;
+    height: 405px;
+    overflow: hidden;
+}
+
+#app .container .bannerSlide .bannerSlideWrapper {
+    width: 4760px;
+    left: 0;
+}
+
+#app .container .bannerSlide .bannerSlideWrapper li {
+    width: 680px;
+    height: 405px;
+}
+
+#app .container .bannerSlide .prev,
+#app .container .bannerSlide .next {
+    left: 0;
+    top: 50%;
+    font-size: 96px;
+    height: 50px;
+    line-height: 36px;
+    margin-top: -25px;
+}
+
+#app .container .bannerSlide .next {
+    left: unset;
+    right: 0;
+}
+
+#app .container .bannerSlide .bannerSlideBox {
+    padding: 0 8px;
+    bottom: 12px;
+    background: #008b8b;
+    width: 108px;
+    left: 50%;
+    margin-left: -62px;
+    border-radius: 15px;
+}
+
+#app .container .bannerSlide .bannerSlideBox .slideWrap {
+    margin-top: 5px;
+}
+
+#app .container .bannerSlide .bannerSlideBox .dotWrap li {
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 100%;
+    margin: 3px;
+}
+
+#app .container .bannerSlide .bannerSlideBox .dotWrap .current,
+#app .container .bannerSlide .bannerSlideBox .dotWrap li:hover {
+    background: #f79804;
+}
+
+#app .container .hotday {
+    width: 500px;
+    height: 380px;
+}
+
+#app .container .hotday .hotday-title {
+    padding-bottom: 5px;
+}
+
+#app .container .hotday .hotday-title h2 {
+    display: inline-block;
+}
+
+#app .container .hotday .hotday-title b {
+    color: #ed3151;
+}
+
+#app .container .hotday .hotday-wrap ul li {
+    float: unset;
+    border-bottom: 1px dashed #008b8b;
+}
+
+#app .container .hotday .hotday-wrap .hotday-content .num {
+    margin-top: 10px;
+    float: left;
+}
+
+#app .container .hotday .hotday-wrap .hotday-content .num em {
+    width: 30px;
+    font-style: oblique;
+    font-size: 32px;
+    text-align: center;
+}
+
+#app .container .hotday .hotday-wrap .hotday-info {
+    width: 460px;
+    padding: 3px 0 5px 10px;
+}
+
+#app .container .hotday .hotday-wrap .hotday-info p {
+    text-indent: 16px;
+    line-height: 24px;
+}
+
+#app .container .hotday .hotday-wrap .hotday-info h3 {
+    line-height: 25px;
+    height: 25px;
+    font-size: 16px;
+    font-style: italic;
+    text-decoration: underline;
+    letter-spacing: 2px;
+    padding:5px 0;
+}
+
+#app .container .hotday .hotday-wrap .hotday-info h3:hover {
+    font-style: normal;
+}
+
+#app .ad {
+    height: 80px;
+    text-align: center;
+    color: #f5f5f5;
+    border-radius: 10px;
+    margin: 20px 0;
+    line-height: 80px;
+    font-size: 36px;
+    letter-spacing: 12px;
+    background: linear-gradient(135deg, #008b8b, #ccc 75%, #008b8b);
+}
+
+#app .publish {
+    height: 738px;
+}
+
+#app .container .index-hot-topic .hot-topic-title {
+    border-bottom: 1px solid #008b8b;
+    margin-bottom: 10px;
+}
+
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list {
+    width: 875px;
+    overflow: hidden;
+}
+
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .hot-topic-list-wrap {
+    width: 894px;
+    height: 547px;
+}
+
+#app .container .index-hot-topic .hot-topic-title .publish a {
+    margin: 0;
+}
+
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list ul li {
+    width: 420px;
+    height: 120px;
+    margin: 0 27px 22px 0;
+}
+
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .hot-topic-list-pic {
+    width: 150px;
+    height: 120px;
+}
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .videoContro,
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .videoContro .smallbg,
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .videoContro .videoControInner{
+   width: 100%;
+   height:20px;
+   bottom:0;
+}
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .videoContro .smallPlay{
+  left:5px;
+  top:3px;
+  color:#000;
+}
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .videoContro .smalljdt{
+    width: 90px;
+    margin-left: 30px;
+    height: 6px;
+    border: 1px solid #000;
+}
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .videoContro .smalljdt .smalljdtinner{
+    background: #f00;
+    height: 6px;
+}
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .videoContro .smallvolumn{
+  color:#000;
+  margin:3px 0 0 10px;
+}
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .videoContro .detailsControl{
+    z-index:2;
+}
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .videoContro .smallbg{
+    background: #008b8b;
+    opacity: .5;
+    z-index:1;
+}
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .hot-topic-list-content {
+    width: 255px;
+    margin-left: 10px;
+}
+
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .hot-topic-list-content a p,
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .hot-topic-list-content-info {
+    height: 65px;
+}
+
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .hot-topic-list-content a {
+    color: #757575;
+}
+
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .hot-topic-list-content a p {
+    text-indent: 12px;
+}
+
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .hot-topic-list-content .hot-topic-list-content-browse span {
+    margin: 0 5px;
+    color: #008b8b;
+}
+
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .hot-topic-list-content h3 {
+    width: 173px;
+}
+
+#app .container .index-hot-topic .invitation {
+    width: 313px;
+    border-left: 1px dashed #008b8b;
+    padding-left: 11px;
+}
+
+#app .container .index-hot-topic .invitation .invitation-info dt {
+    margin: -5px 0 5px 10px;
+}
+
+#app .container .index-hot-topic .invitation .invitation-info dd:nth-child(2) {
+    border-top: 1px solid #008b8b;
+}
+
+#app .container .index-hot-topic .invitation .invitation-info dd {
+    margin-left: 10px;
+    border-bottom: 1px dashed #008b8b;
+    padding: 10px 0;
+}
+
+#app .container .index-hot-topic .invitation .invitation-info dd {
+    width: 300px;
+}
+
+#app .container .index-hot-topic .invitation .invitation-info dd p {
+    width: 267px;
+    margin: 5px 0 0 33px;
+}
+
+#app .container .index-hot-topic .invitation .invitation-info dd i {
+    width: 20px;
+    height: 22px;
+    text-align: center;
+    line-height: 20px;
+}
+
+#app .container .index-hot-topic .invitation-info dd a {
+    width: 80%;
+    margin-right: 35px;
+    font-size: 16px;
+}
+
+#app .container .index-hot-topic .invitation .invitation-info dd a.more {
+    text-align: center;
+    width: 30%;
+    font-size: 12px;
+}
+
+#app .container .index-hot-topic .invitation .invitation-info dd a.more {
+    margin-right: 0;
+}
+
+.meber-show {
+    height: 180px;
+    border-radius: 5px;
+}
+
+.meber-show .meber-show-icon {
+    width: 140px;
+    margin-top: 32px;
+    color: #f5f5f5;
+}
+
+.meber-show .meber-show-icon i {
+    width: 46px;
+    height: 68px;
+    font-size: 60px;
+    margin-left: 39px;
+}
+
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .meber-show .meber-show-icon .meber-show-title {
+    width: 140px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .meber-show-banner {
+    width: 720px;
+    margin-top: 18px;
+    border-radius: 5px;
+}
+
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .meber-show-banner .meber-show-banner-admin {
+    width: 685px;
+    height: 140px;
+    background: #f5f5f5;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .meber-show-banner .meber-show-banner-admin .meber-show-banner-admin-list {
+    top: 6px;
+    left: 0;
+    margin-top: 0;
+}
+
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .meber-show-banner .meber-show-banner-admin .meber-show-banner-admin-list .meber-show-banner-admin-list-parent {
+    height: 120px;
+}
+
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .meber-show-banner-admin .meber-show-banner-admin-list li:last-child {
+    border-right: none;
+}
+
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .meber-show-banner-admin .meber-show-banner-admin-list li {
+    padding: 0 13px;
+    margin: 10px 0 0 0;
+    width: 180px;
+    height: 120px;
+    color: #fff;
+    text-align: center;
+    line-height: 140px;
+    border-right: 1px dashed #008b8b;
+}
+
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .meber-show-banner-admin .meber-show-banner-admin-list .meber-show-banner-admin-pic {
+    width: 50px;
+    height: 50px;
+}
+
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .meber-show-banner-admin .meber-show-banner-admin-list .meber-show-banner-admin-pic img {
+    border-radius: 50%;
+}
+
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .meber-show-banner-admin .meber-show-banner-admin-list .meber-show-banner-admin-user {
+    height: 50px;
+    line-height: 25px;
+    margin-right: 10px;
+    width: 110px;
+}
+
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .meber-show-banner-admin .meber-show-banner-admin-list .meber-show-banner-admin-user h3 {
+    height: 26px;
+    width: 100px;
+    line-height: 25px;
+    color: #222;
+    text-align: left;
+}
+
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .meber-show-banner-admin .meber-show-banner-admin-list .meber-show-banner-admin-user a {
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 110px;
+}
+
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .meber-show-banner-admin .meber-show-banner-admin-list .meber-show-banner-admin-article-trangle {
+    top: 53px;
+    left: 15px;
+    width: 0;
+    height: 0;
+    border-width: 0 7px 7px;
+    border-style: solid;
+    border-color: transparent transparent #757575;
+}
+
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .meber-show-banner-admin .meber-show-banner-admin-list .meber-show-banner-admin-article-details {
+    margin-top: 60px;
+    width: 177px;
+    height: 55px;
+    line-height: 20px;
+    color: #757575;
+    border-top: 1px solid #757575;
+    padding-top: 5px;
+    font-size: 12px;
+    text-align: left;
+    text-indent: 14px;
+}
+
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .meber-show .change-bnt {
+    width: 30px;
+    height: 50px;
+    line-height: 50px;
+    top: 50%;
+    margin-top: -25px;
+    text-align: center;
+    font-size: 28px;
+    color: #f5f5f5;
+}
+
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .meber-show .change-bnt.prev {
+    left: 105px;
+}
+
+#app .container .index-hot-topic .hot-topic-left .hot-topic-list .meber-show .change-bnt.next {
+    right: 0;
+}
+
+#app .container .index-hot-topic .invitation .invitation-show {
+    padding: 20px 0 0 15px;
+}
+
+#app .container .index-hot-topic .invitation .invitation-show .invitation-show-list {
+    margin: 0 10px 8px 0;
+    width: 88px;
+    height: 88px;
+}
+
+#app .container .index-hot-topic .invitation .invitation-show .invitation-show-list .invitation-show-list-background {
+    z-index: 2;
+    background: #008b8b;
+    top: 88px;
+    opacity: .5;
+    color: #f5f5f5;
+    width: 88px;
+    height: 88px;
+    left: 0;
+}
+
+#app .container .index-hot-topic .invitation .invitation-show .invitation-show-list:hover .invitation-show-list-background,
+#app .container .index-hot-topic .invitation .invitation-show .invitation-show-list:hover .invitation-show-list-info {
+    top: 0;
+}
+
+#app .container .index-hot-topic .invitation .invitation-show .invitation-show-list .invitation-show-list-info {
+    left: 0;
+    top: 88px;
+    text-align: center;
+    z-index: 2;
+    color: #fff;
+    width: 88px;
+    height: 88px;
+}
+
+#app .container .funnyBanner .bannerSlideWrapper {
+    width: 1700px;
+}
+
+#app .container .funnyBanner .bannerSlideWrapper li,
+#app .container .funnyBanner {
+    width: 340px;
+}
+
+#app .container .funnyBanner .funnyPicture-info {
+    bottom: 0;
+    width: 340px;
+    height: 90px;
+    z-index: 222;
+    background: #fff;
+    opacity: .5;
+    text-align: center;
+}
+
+#app .container .funny-picture {
+    width: 860px;
+}
+
+#app .container .funny-picture-list,
+#app .container .funny-picture-list .funny-picture-background,
+#app .container .funny-picture-list .funny-picture-list-info {
+    width: 200px;
+    height: 180px;
+}
+
+#app .container .funny-picture-list {
+    margin-left: 15px;
+    overflow: hidden;
+}
+
+#app .container .funny-picture-list .funny-picture-background {
+    top: 180px;
+    background: #008b8b;
+    opacity: .5;
+}
+
+#app .container .funny-picture-list .funny-picture-list-info {
+    top: 180px;
+    height: 180px;
+    text-align: center;
+    color: #fff;
+}
+
+#app .container .funny-picture-list:hover .funny-picture-background,
+#app .container .funny-picture-list:hover .funny-picture-list-info {
+    top: 0;
+}
+
+#app .container .funny-picture .funny-video-list {
+    width: 272px;
+    height: 190px;
+    margin: 10px 0px 0 14.5px;
+}
+
+#app .container .arctiles {
+    width: 825px;
+    border-right: 1px dashed #008b8b;
+}
+
+#app .container .arctiles .addMore {
+    margin-top: 10px;
+}
+
+#app .container .arctiles .beautiful-article-info {
+    width: 800px;
+    margin-bottom: 10px;
+}
+
+#app .container .arctiles ul li,
+#app .container .beautiful-article ul li {
+    border-bottom: 1px solid #008b8b;
+}
+
+#app .container .arctiles .beautiful-article h3 {
+    margin-bottom: 10px;
+}
+
+#app .container .arctiles .beautiful-article-info p {
+    margin-bottom: 5px;
+    height: auto;
+    text-indent: 16px;
+}
+
+#app .container .arctiles .beautiful-article-info .beautiful-article-bottom-info em {
+    height: 25px;
+    line-height: 25px;
+    margin: 0 5px;
+}
+
+#app .container .arctiles .beautiful-article-info .beautiful-article-img {
+    width: 220px;
+    height: 140px;
+    margin: 0 10px 10px 0;
+}
+
+#app .container .arctiles .beautiful-article-model .beautiful-article-info .beautiful-article-info-content {
+    width: 570px;
+}
+
+#app .container .arctiles .beautiful-article-model .beautiful-article-info .beautiful-article-bottom-info {
+    bottom: 10px;
+    right: 0;
+}
+
+#app .container .beautiful-article-right,
+#app .container .article-ranking,
+#app .container .article-ranking .article-ranking-title {
+    width: 342px;
+}
+
+#app .container .article-ranking .article-ranking-title {
+    border-bottom: 1px solid #008b8b;
+    margin-bottom: 10px;
+}
+
+#app .container .article-ranking .article-ranking-title h3 {
+    display: inline-block;
+    margin-right: 202px;
+}
+
+#app .container .article-ranking .article-ranking-title a {
+    margin-left: 5px;
+}
+
+#app .container .article-ranking ul li {
+    float: unset;
+    text-decoration: underline;
+}
+
+#app .container .article-ranking ul li em {
+    font-style: italic;
+    margin-right: 10px;
+}
+
+#app .container .article-ranking a.on {
+    color: #ed3151;
+}
+
+#app .container .read .read-img {
+    width: 160px;
+    height: 120px;
+}
+
+#app .container .read .read-info {
+    width: 170px;
+    line-height: 20px;
+}
+
+#app .container .read .read-info span {
+    text-indent: 16px;
+    height: 100px;
+}
+
+#app .container .pictureShow {
+    width: 290px;
+    height: 268px;
+    margin: 0 13px 15px 0;
+}
+
+#app .container .pictureShow .pictureShow-fengmian a {
+    display: inline-block;
+    width: 290px;
+    height: 190px;
+}
+
+#app .container .pictureShow a label {
+    top: 5px;
+    right: 5px;
+}
+
+#app .container .pictureShow .pictureShow-author-info {
+    background: #fff;
+}
+
+#app .container .pictureShow .pictureShow-author-info .userInfo {
+    margin: 10px 10px 0 20px;
+    width: 40px;
+    height: 40px;
+}
+
+#app .container .pictureShow .pictureShow-author-info .userInfo img {
+    border-radius: 50%;
+}
+
+#app .container .pictureShow .pictureShow-author-info .pictureShow-title {
+    width: 70%;
+    height: 40px;
+    line-height: 20px;
+    margin: 10px 17px 0 0;
+}
+
+#app .container .pictureShow .pictureShow-author-info .pictureShow-details {
+    margin-left: 5px;
+}
+
+#app .container .pictureShow .pictureShow-author-info .pictureShow-details span {
+    margin: 0 3px;
+}
+
+#app .container .pictureShow.noMarginRight {
+    margin-right: 0;
+}
+
+#app .container .pictureShow .pictureShow-author-info .pictureShow-title h6 {
+    display: block;
+}
+
+#app .container .beautiful-article .beautiful-article-model h3 {
+    margin: 7px 0;
+}
+
+#app .container .beautiful-article .beautiful-article-info .beautiful-article-img span {
+    right: 5px;
+    bottom: 0;
+    padding: 5px;
+}
+
+#app .container .beautiful-article .beautiful-article-info .beautiful-article-img span i {
+    height: 20px;
+}
+
+#app .container .picture .pictureInfoImage {
+    width: 180px;
+    height: 180px;
+    padding-bottom: 10px;
+}
+
+#app .container .picture .index-hot-topic .beautiful-article .pictureInfo {
+    padding: 0 0 5px;
+    width: 805px;
+    margin-right: 20px;
+    border-bottom: 1px solid #008b8b;
+}
+
+#app .container .picture .index-hot-topic .beautiful-article .pictureInfo .publicIndexContent {
+    width: 605px;
+    margin-left: 20px;
+}
+
+#app .container .picture .index-hot-topic .beautiful-article .pictureInfo .publicIndexContent .publicIndexContentDetails {
+    height: 120px;
+    text-indent: 16px;
+}
+
+#app .container .picture .index-hot-topic .beautiful-article .pictureInfo .picture-userInfo em {
+    margin: 0 5px;
+}
+
+#app .container .publicAddMore {
+    margin-top: 20px;
+}
+
+#app .container .videos {
+    padding-bottom: 15px;
+}
+
+#app .container .videos h3 {
+    margin: 7px 0;
+}
+
+#app .container .videos .viedo-details .videoInfo {
+    width: 805px;
+}
+
+#app .container .videos .viedo-details .videoInfo video {
+    height: 303px;
+}
+
+#app .container .videos .viedo-details .videoInfo .videoComment ul li {
+    float: none;
+    height: 30px;
+    line-height: 30px;
+}
+
+#app .container .videos .viedo-details .videoInfo .video-wrap {
+    width: 575px;
+    color: #f5f5f5;
+}
+
+#app .container .videos .viedo-details .videoInfo .videoComment {
+    width: 210px;
+}
+
+#app .container .videos .viedo-details .videoInfo .videoComment span {
+    display: block;
+    text-indent: 16px;
+    color: #f5f5f5;
+}
+
+#app .container .videos .viedo-details .videoInfo .videoComment ul {
+    height: 275px;
+}
+
+#app .container .videos .viedo-details .videoInfo .video-wrap .video-wrap em {
+    margin: 0 5px;
+}
+
+#app .container .videos .viedo-details .videoInfo .videoComment .pubVideoPl {
+    width: 210px;
+    bottom: 10px;
+    left: 8px;
+}
+
+#app .container .videos .viedo-details .videoInfo .videoComment .pubVideoPl textarea {
+    width: 152px;
+    height: 20px;
+    padding: 3px;
+    resize: none;
+    background: #fff;
+}
+
+#app .container .videos .viedo-details .videoInfo .videoComment .pubVideoPl input[type=submit] {
+    width: 50px;
+    line-height: 28px;
+    color: #f5f5f5;
+}
+
+#app .container .loginTips {
+    display: block;
+    margin: 75px;
+    text-align: center;
+    letter-spacing: 12px;
+}
+
+#app .loginRegistor .register {
+    width: 600px;
+    border-right: 1px dashed #008b8b;
+}
+
+#app .loginRegistor .login h3,
+#app .loginRegistor .register h3 {
+    text-align: center;
+    margin: 10px auto;
+}
+
+#app .loginRegistor .login .login-table,
+#app .loginRegistor .register .login-table {
+    margin: 0 auto;
+}
+
+#app .loginRegistor .login .login-table ul li,
+#app .loginRegistor .register .login-table ul li {
+    float: unset;
+}
+
+#app .loginRegistor .login input,
+#app .loginRegistor .register input {
+    height: 20px;
+    line-height: 20px;
+    text-indent: 12px;
+    width: 180px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 8px 20px 8px 185px;
+}
+
+#app .loginRegistor .login .moreLogin {
+    display: block;
+}
+
+#app .loginRegistor .login .login-table ul {
+    margin-right: 140px;
+}
+
+#app .loginRegistor .login input[type=button],
+#app .loginRegistor .register input[type=button] {
+    width: 80px;
+    height: 30px;
+    line-height: 20px;
+    background: #008b8b;
+    color: #f5f5f5;
+    text-align: center;
+    text-indent: 0;
+    margin-left: 250px;
+}
+
+#app .container .comment {
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid #008b8b;
+}
+
+
+#app .container .comment .publishCommentDetails .commentDetails .commentDetailsContainer .subComment .subCommentDetails{
+    width: 900px;
+}
+
+#app .container .comment .publishComment .publishCommentTitle h3 {
+    width: 70px;
+    color: #008b8b;
+    overflow: hidden;
+}
+
+#app .container .comment .publishComment .publishEditore textarea {
+    width: 899px;
+    padding: 5px 10px;
+    height: 18px;
+    line-height: 20px;
+    border-radius: 5px;
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#app .container .showPictureBanner .comment .publishComment .publishEditore textarea {
+    width: 799px;
+}
+
+#app .container .arctilesDetailsLeft .arctileUerInfo span {
+    margin: 0 5px;
+}
+
+#app .container .comment .publishComment .publishEditore input {
+    cursor: pointer;
+    text-align: center;
+    width: 80px;
+    border-radius: 2px;
+    color: #f5f5f5;
+    letter-spacing: 2px;
+}
+
+#app .container .comment .publishCommentDetails .userComment .photo {
+    width: 80px;
+    height: 80px;
+}
+#app .container .comment .publishCommentDetails .userComment .commentDetails,
+#app .container .arctilesDetailsLeft .comment .publishCommentDetails .userComment .commentDetails {
+    width: 915px;
+}
+#app .container .showPictureBanner .comment .publishCommentDetails .userComment .commentDetails {
+    width: 815px;
+}
+#app .container .comment .publishCommentDetails .userComment .photo img {
+    border-radius: 50%;
+}
+
+#app .container .comment .publishCommentDetails .commentDetails .userCommentInfo {
+    display: block;
+}
+
+#app .container .comment .publishCommentDetails .commentDetails .commentDetailsContainer dl dt {
+    margin-bottom: 10px;
+    float: unset;
+    text-indent: 16px;
+    line-height: 30px;
+}
+
+#app .container .comment .publishCommentDetails .userComment .commentDetails h3 {
+    margin-top: 20px;
+}
+#app .container .comment .publishCommentDetails .commentDetails .commentDetailsContainer .subComment .subCommentDetails .subFooter,
+#app .container .comment .publishCommentDetails .commentDetails .commentDetailsContainer .subComment {
+    margin-left: 15px;
+}
+#app .container .comment .publishCommentDetails .commentDetails .commentDetailsContainer .subComment .subCommentDetails{
+    padding-left:20px;
+}
+#app .container .comment .publishCommentDetails .commentDetails .commentDetailsContainer .subFooter {
+    display: block;
+}
+
+#app .container .comment .publishCommentDetails .commentDetails .commentDetailsContainer .subPublish textarea {
+    width: 708px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 18px;
+    line-height: 18px;
+    padding: 5px 10px;
+}
+
+#app .container .comment .publishCommentDetails .commentDetails .commentDetailsContainer .subPublish input {
+    width: 80px;
+    color: #f5f5f5;
+}
+
+.container .arctilesDetailsLeft .arctileContainer .quill-editor .ql-toolbar {
+    display: none;
+}
+
+#app .container .arctilesDetailsLeft .quill-editor .ql-container {
+    border: 0;
+    height: auto;
+}
+
+#app .container .arctilesDetailsLeft .quill-editor .ql-container p {
+    line-height: 25px;
+}
+
+#app .container .arctilesDetailsRight {
+    width: 200px;
+}
+
+#app .container .arctilesDetailsRight .publishUser ul li:first-child {
+    width: 100px;
+    height: 100px;
+    margin: 0 50px;
+}
+
+#app .container .arctilesDetailsRight .publishUser ul li {
+    line-height: 30px;
+    text-align: center;
+    float: unset;
+}
+
+#app .container .arctilesDetailsRight .publishUser ul li a {
+    margin: 10px auto 0;
+}
+
+#app .container .arctilesDetailsRight .publishUser .ds {
+    width: 120px;
+    height: auto;
+    margin: 0 auto;
+}
+/*
+#app .container .videoDetails .showPictureBanner,
+#app .container .showPictureBanner .slideDetails {
+    width: 886px;
+}
+*/
+#app .container .VideoDetailsLeft .detailsInfo,
+#app .container .slideDetails {
+    height: 510px;
+}
+
+#app .container .userPictureInfo {
+    width: 280px;
+}
+
+#app .container .userPictureDteilsInfo {
+    width: 50px;
+    height: 50px;
+}
+
+#app .container .userPictureDteilsInfo img {
+    border-radius: 50%;
+}
+
+#app .container .userPictureInfo .userFooter .userPictureDetailsShareInfoDetails{
+    display: block;
+}
+
+#app .container .userPictureInfo .userFooter .userPictureDetailsShareInfoDetails ul{
+    display: inline-block;
+    width: 81%;
+    line-height: 20px;
+    vertical-align: middle;
+}
+#app .container .userPictureInfo .userFooter .userPictureDetailsShareInfoDetails a,
+#app .container .userPictureInfo .userFooter .userPictureDetailsShareInfoDetails ul li{
+    margin:0 5px;
+}
+#app .container .author .tpgzyh {
+    width: 50px;
+    text-align: center;
+    color: #f5f5f5;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+#app .container .userPictureInfo .detailsPictureContainer {
+    height: 366px;
+}
+
+#app .container .userPictureInfo .userFooter .userPictureTime {
+    margin: 5px 0;
+}
+
+#app .container .userPictureInfo .userFooter .userPictureDetailsShareInfoDetails label {
+    margin-right: 5px;
+}
+
+#app .container .showPictureBanner .slideDetails a {
+    top: 50%;
+    z-index: 2;
+    width: 35px;
+    height: 70px;
+    margin-top: -35px;
+    border-radius: 3px;
+    background-repeat: no-repeat;
+}
+
+#app .container .slidePictureDetails {
+    right: -320px;
+    top: 30px;
+    overflow: hidden;
+}
+
+#app .container .slidePictureDetails .wrapperContainer {
+    width: 600px;
+    height: 330px;
+    left:0;
+}
+#app .container .slidePictureDetails .wrapperContainer li{
+    width:300px;
+    height:330px;
+}
+#app .container .slidePictureDetails .slideDetailsPictureContainer {
+    width: 300px;
+    height: 330px;
+    overflow: hidden;
+}
+
+#app .container .showPictureBanner .slideDetails .prev {
+    left: 5px;
+}
+
+#app .container .showPictureBanner .slideDetails .next {
+    right: 5px;
+}
+
+#app .container .ck-slideDetailsPicture .slideDetailsPictureContainer ul {
+    width: 1500px;
+    left: 0;
+}
+
+#app .container .showPictureBanner .slideDetails .slideDetailsPicture {
+    width: 100%;
+    height: 510px;
+    overflow: hidden;
+}
+
+#app .container .showPictureBanner .slideDetails .slideDetailsPicture .slideWrapper {
+    left: 0;
+}
+
+#app .container .showPictureBanner .slideDetails .slideDetailsPicture .showPictureBannerDetailsImg {
+    height: 510px;
+}
+
+#app .container .showPictureBanner .slideDetails .slideDetailsPicture .showPictureBannerDetailsImg b {
+    bottom: 5px;
+    right: 10px;
+}
+ 
+#app .container .detailsInfo .controlStrip {
+    color: #f5f5f5;
+}
+
+#app .container .detailsInfo .controlStrip span {
+    float: left;
+    margin-right: 10px;
+}
+
+#app .container .detailsInfo .controlStrip span.fullScreen {
+    float: right;
+}
+
+#app .container .detailsInfo .controlStrip .playInfo {
+    width: 30px;
+    font-size: 16px;
+}
+
+#app .container .detailsInfo .controlStrip .playInfo i {
+    left: 50%;
+    top: 50%;
+    margin: -7px 0 0 -7px;
+}
+
+#app .container .detailsInfo .controlStrip .prograss {
+    width: 540px;
+    height: 4px;
+    border: 2px solid #f5f5f5;
+    margin: 11px 10px 0 5px;
+}
+
+#app .container .detailsInfo .controlStrip .prograss em {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: #f79804;
+}
+
+#app .container .detailsInfo .controlStrip .volume {
+    width: 110px;
+}
+
+#app .container .videoDetails .controlStrip i {
+    width: 30px;
+    top: 0;
+    left: 0;
+    cursor: default;
+    text-align: center;
+}
+
+#app .container .detailsInfo .controlStrip .volume .parentVolume {
+    top: -2px;
+    left: 0;
+    width: 80px;
+    height: 6px;
+    background: #f5f5f5;
+}
+
+#app .container .detailsInfo .controlStrip .volume .parentVolume i {
+    top: -2px;
+    left: 35px;
+    border: none;
+    width: 10px;
+    height: 10px;
+    background: #f79804;
+    border-radius: 50%;
+}
+
+#app .container .detailsInfo .controlStrip .video-down {
+    
+    text-align: center;
+}
+
+#app .container .detailsInfo .controlStrip .video-down a {
+    color: #f5f5f5;
+}
+
+#app .notFound {
+    color: #008b8b;
+    text-align: center;
+    height: 735px;
+    padding: 1px;
+}
+
+#app .notFound p:first-child {
+    font-size: 200px;
+    height: 150px;
+    line-height: 150px;
+    margin: 195px 0 100px 0;
+}
+
+#app .notFound p:last-child {
+    font-size: 46px;
+    height: 80px;
+    line-height: 80px;
+}
+
+#app .publish .title .select:hover .proClassfiy,
+#app .publish .title .NavClassfiy:hover .subNavInfo {
+    display: inline-block;
+}
+
+#app .publish .title .select {
+    z-index: 35;
+    width: 80px;
+    text-align: center;
+}
+
+#app .publish .title .select span {
+    display: block;
+    border: 1px solid #ccc;
+    border-top-left-radius: 5px;
+    background: #fff;
+}
+
+#app .publish .title .select ul {
+    width: 98%;
+    left: 0;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+#app .publish .title .select ul li {
+    float: unset;
+    height: 30px;
+    line-height: 30px;
+}
+
+#app .publish .title .NavClassfiy {
+    width: 150px;
+    left: 80px;
+}
+
+#app .publish .title .NavClassfiy {
+    display: block;
+}
+
+#app .publish .title .NavClassfiy .subClassfiy {
+    border-top-left-radius: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+#app .publish .title .searchtype_arrow {
+    height: 0;
+    width: 0;
+    font-size: 0;
+    line-height: 0;
+    border-width: 5px 5px 0;
+    border-style: solid dashed;
+    border-color: #222 transparent transparent;
+    top: 14px;
+    left: 63px;
+}
+
+#app .publish .title .sub_arrow {
+    left: 125px;
+}
+
+#app .publish .title input[type=text] {
+    width: 948px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+}
+
+#app .container .quill {
+    width: 1200px;
+}
+
+#app .container .lookArctile {
+    width: 1000px;
+}
+
+#app .container .quill-editor .ql-toolbar {
+    width: 100%;
+    border-top: 0;
+    background: #fff;
+}
+
+#app .container .ql-container.ql-snow {
+    border: 1px solid #ccc;
+    height: 450px;
+    width: 600px;
+}
+
+#app .container .ql-container.ql-snow {
+    border-top: 0;
+}
+
+#app .container .ql-container .ql-editor {
+    width: 100%;
+}
+
+#app .container .ql-container .ql-editor p img {
+    display: block;
+    width: 70%;
+    height: 70%;
+    margin: 0 auto;
+}
+
+#app .container .lookArctile .ql-container.ql-snow {
+    width: 1000px;
+}
+
+#app .container .preview {
+    top: 73px;
+    right: 0;
+    width: 579px;
+    height: 429px;
+    border: 1px solid #ccc;
+    resize: none;
+    color: #222;
+    padding: 10px;
+    border-top: 0;
+}
+
+#app .container .preview .ql-toolbar.ql-snow {
+    display: none;
+}
+
+#app .container .preview .ql-container.ql-snow {
+    border: none;
+    margin: -10px 0 0 -10px;
+}
+
+#app .publish .imgUpload .prompt ul li {
+    margin: 10px 12px 0 0;
+}
+
+#app .publish .imgUpload .imgUploadOptions {
+    width: 190px;
+    height: 253px;
+}
+
+#app .publish .imgUpload .imgUploadOptions .imgUploadOptionsButton {
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 80px;
+    text-align: center;
+    border-radius: 5px;
+    color: #757575;
+}
+
+#app .publish .imgUpload .imgUploadOptions .promptPhoto,
+#app .publish .imgUpload .prompt .promptPhoto {
+    display: block;
+    width: 188px;
+    height: 198px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+#app .publish .imgUpload .imgUploadOptions .promptPhoto {
+    width: 187px;
+    line-height: 200px;
+    font-size: 60px;
+}
+
+#app .publish .imgUpload .prompt .promptPhotoInfo {
+    height: 42px;
+    padding: 5px;
+    width: 180px;
+    line-height: 18px;
+    background: #fff;
+    border: 0;
+}
+
+#app .publish .imgUpload .prompt input[type=file] {
+    top: 0;
+    left: 0;
+    width: 190px;
+    height: 255px;
+    opacity: 0;
+    z-index: 3;
+}
+
+#app .publish .imgUpload .prompt .promptPhoto .imgOptation .innerOption,
+#app .publish .imgUpload .prompt .promptPhoto .imgOptation {
+    width: 100%;
+}
+
+#app .publish .imgUpload .prompt .promptPhoto .imgOptation .innerOption {
+    z-index: 3;
+    color: #f5f5f5;
+    font-size: 12px;
+}
+
+#app .publish .imgUpload .prompt .promptPhoto .imgOptation .updataloadbackground {
+    background: #008b8b;
+    opacity: .5;
+    width: 100%;
+    height: 20px;
+    z-index: 2;
+}
+
+#app .publish .imgUpload .prompt .promptPhoto .imgOptation .innerOption em {
+    margin: 0 5px;
+}
+
+#app .publish .videoUpload .videoUploadWrap {
+    width: 1198px;
+    height: 500px;
+    margin-top: 10px;
+    border: 1px dashed #008b8b;
+}
+
+#app .publish .videoUpload .videoUploadWrap .videoUploadInner {
+    width: 230px;
+    left: 50%;
+    top: 50%;
+    margin: -175px 0 0 -115px;
+    text-align: center;
+}
+
+#app .publish .videoUpload .videoUploadWrap .videoUploadInner i {
+    font-size: 120px;
+    color: #008b8b;
+}
+
+#app .publish .videoUpload .videoUploadWrap .videoUploadInner input[type=file] {
+    top: 0;
+    left: 49px;
+    width: 128px;
+    height: 120px;
+    opacity: 0;
+}
+
+#app .publish .videoUpload .videoUploadWrap label {
+    display: inline-block;
+    color: #008b8b;
+    font-size: 20px;
+}
+
+#app .publish .videoUpload .videoUploadWrap .videoUploadShowInfo .videoUploadwbk {
+    width: 800px;
+    display: block;
+    height: 20px;
+    margin: 20px auto;
+    color: #757575;
+}
+
+#app .publish .videoUpload .videoUploadWrap .videoUploadShowInfo .videoUploadbk {
+    border: 1px solid #008b8b;
+    width: 800px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 15px;
+    z-index: 2;
+}
+
+#app .publish .videoUpload .videoUploadWrap .videoUploadShowInfo .videoUploadbk .videoUploadbg {
+    z-index: 3;
+    background: #008b8b;
+    border-radius: 15px;
+    height: 20px;
+    width: 0;
+    line-height: 20px;
+    left: 0;
+    top: 0;
+    text-align: center;
+}
+
+#app .publish .videoUpload .videoUploadWrap .videoUploadShowInfo .videoPreview {
+    width: 650px;
+    height: 420px;
+    margin-left: 20px;
+}
+
+#app .publish .videoUpload .videoUploadWrap .videoUploadShowInfo .videoEditor {
+    width: 488px;
+    margin-right: 20px;
+}
+
+#app .publish .videoUpload .videoUploadWrap .videoUploadShowInfo .videoEditor textarea {
+    width: 468px;
+    height: 400px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+#app .publish .videoUpload .videoUploadWrap .videoUploadShowInfo .videoUploadPrograss {
+    z-index: 4;
+    height: 20px;
+    line-height: 20px;
+    top: 1px;
+    text-align: center;
+    left: 50%;
+    margin-left: -15px;
+}
+
+#app .container .personalset .personal .personalInfo {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#app .personal .personalInfo .personalPhoto {
+    width: 80px;
+    height: 80px;
+}
+
+#app .personal .personalInfo .personalPhoto img {
+    border-radius: 50%;
+}
+
+#app .personal .personalInfo .personalshowInfo {
+    height: 80px;
+    line-height: 40px;
+    margin-left: 10px;
+}
+
+#app .personal .personalInfo .personalshowInfo h4 {
+    text-indent: 14px;
+}
+
+#app .personal .personalInfo .personalshowInfo ul li {
+    width: 70px;
+    text-align: center;
+    border-right: 1px solid #ccc;
+    line-height: 25px;
+}
+
+#app .personal .personalInfo .personalshowInfo ul li label {
+    display: block;
+}
+
+#app .personal .personalNav ul li {
+    padding: 0 20px;
+}
+
+#app .personal .personalNav {
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+#app .personal .personalInfo .personal {
+    margin: 38px 0 0 18px;
+    display: inline-block;
+}
+
+#app .personal .personalShowDetailsInfo .previewPhotoArea {
+    margin-right: 10px;
+}
+
+#app .personal .userPhoto {
+    vertical-align: top;
+    width: 200px;
+    height: 250px;
+    margin-right: 20px;
+}
+
+#app .personal .userPhoto .chooseBox {
+    top: 0;
+    left: 0;
+    width: 78px;
+    height: 78px;
+    border: 1px solid #008b8b;
+}
+
+#app .personal .previewPhoto {
+    width: 200px;
+    height: 200px;
+}
+
+#app .personal .userPhoto input[type=file] {
+    top: 210px;
+    left: 0;
+    z-index: 2;
+    width: 100px;
+    opacity: 0;
+}
+
+#app .personal .userPhoto b {
+    display: block;
+    top: 210px;
+    left: 0;
+    width: 100px;
+    text-align: center;
+    color: #f5f5f5;
+    border-radius: 15px;
+}
+
+#app .personal .previewShear {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+}
+
+#app .personal .previewCircle {
+    width: 80px;
+    height: 80px;
+}
+
+#app .personal .personalUsername {
+    width: 896px;
+    margin: 10px 0;
+    line-height: 30px;
+}
+
+#app .personal .personalUsername label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#app .personal .personalUsername input[type=text] {
+    width: 200px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+#app .personal .personalUsername .sex li {
+    margin: 0 5px;
+}
+
+#app .personal .personalUsername textarea {
+    width: 350px;
+    height: 250px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#app .personal .social {
+    margin-bottom: 10px;
+}
+
+#app .personal .social .binding p {
+    margin-left: 10px;
+}
+
+#app .personal .social .accountNumber {
+    margin: 10px 0 0 10px;
+}
+
+#app .container .perVideo ul li,
+#app .container .perArticle .garagraph li,
+#app .personal .social .accountNumber li {
+    clear: both;
+}
+
+#app .container .perArticle .garagraph li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #008b8b;
+}
+
+#app .container .perArticle .garagraph .beautiful-article-info .beautiful-article-img,
+#app .container .perArticle .garagraph .beautiful-article-info .beautiful-article-info-content {
+    height: 140px;
+}
+
+#app .container .perArticle .garagraph .beautiful-article-info .beautiful-article-img {
+    width: 220px;
+    margin: 0 10px 10px 0;
+}
+
+#app .container .perArticle .garagraph .beautiful-article-info .beautiful-article-info-content {
+    width: 693px;
+}
+
+#app .container .perArticle .garagraph .beautiful-article-info .beautiful-article-info-content p {
+    text-indent: 16px;
+    height: 120px;
+}
+
+#app .container .perArticle .garagraph .noPicture .beautiful-article-info-content p {
+    height: 110px;
+}
+
+#app .container .perArticle .garagraph .noPicture .beautiful-article-info .arctileFooter {
+    margin-bottom: 10px;
+}
+
+#app .container .perArticle .garagraph .noPicture .beautiful-article-info-content,
+#app .container .perVideo .beautiful-article-model,
+#app .container .perVideo,
+#app .container .perPicture {
+    width: 922px;
+}
+
+#app .container .perVideo ul li,
+#app .container .perPicture ul li {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+#app .container .perPicture .beautiful-article-info .pictureInfoImage {
+    width: 220px;
+    height: 160px;
+}
+
+#app .container .perPicture .beautiful-article-info .perPictureContent {
+    width: 692px;
+    margin-left: 10px;
+}
+
+#app .container .perPicture .beautiful-article-info .perPictureContent .perPictureContentDetails {
+    height: 110px;
+}
+
+#app .container .perVideo .beautiful-article-model .beautiful-article-info .beautiful-video-img {
+    width: 220px;
+    height: 120px;
+}
+
+#app .container .perVideo .beautiful-article-model .beautiful-article-info .beautiful-video-img span {
+    bottom: 10px;
+    left: 135px;
+}
+
+#app .container .perVideo .beautiful-article-model .beautiful-article-info p {
+    height: 100px;
+    text-indent: 16px;
+}
+
+#app .container .perVideo .beautiful-article-model .beautiful-article-info .beautiful-article-info-content {
+    margin-left: 10px;
+    width: 692px;
+}
+
+#app .container .perCollection .beautiful-article,
+#app .container .perCollection .arctiles {
+    width: 826px;
+    border-right: none
+}
+
+.personal .customMessage ul li {
+    margin: 10px 0;
+}
+
+#app .personal .customMessage .customMessageWrap .customPhoto {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+#app .personal .customMessage .customMessageWrap .customPhoto img {
+    border-radius: 5px;
+}
+
+#app .personal .customMessage .customMessageWrap .customPrompt {
+    width: 920px;
+}
+
+#app .personal .customMessage .customMessageWrap .customPromptTop {
+    display: block;
+}
+
+#app .personal .customMessage .customMessageWrap .customPrompt p {
+    text-indent: 16px;
+}
+
+#app .container .pagination {
+    margin-top: 10px;
+}
+
+#app .container .pagination ul {
+    text-align: center;
+}
+
+#app .container .pagination ul li {
+    display: inline-block;
+    padding: 0 5px;
+    min-width: 25px;
+    float: none;
+    margin: 0 20px 10px 0;
+    border-bottom: 0;
+}
+
+#app .container .pagination .active {
+    background: #008b8b;
+    border-radius: 5px;
+}
+
+#app .container .pagination .active a {
+    color: #f5f5f5;
+}
+
+
+/* footer */
+
+#footer {
+    color: #f5f5f5;
+    height: 80px;
+}
+
+#footer .footer {
+    margin-top: 16px;
+    text-align: center;
+}
+
+#footer .footer ul li {
+    padding: 0 16px;
+}
+
+#app .webInfo i {
+    color: #008b8b;
+    font-size: 24px;
+}
+
+#app .webInfo {
+    min-height: 713px;
+}
+
+#app .container dl,
+#app .container dd {
+    float: unset;
+    height: auto;
+    line-height: 30px;
+}
+
+#app .webInfo dd span {
+    width: 1130px;
+}
+
+#app .webInfo span {
+    line-height: 30px;
+}
+
+#app .container .introduction-title .suggest,
+#app .container .introduction-title .suggestInput {
+    width: 800px;
+    height: 500px;
+    padding: 10px;
+    margin: 10px 190px;
+    border-radius: 5px;
+}
+
+#app .container .introduction-title .suggestInput {
+    height: 10px;
+    border: 1px solid #757575;
+    margin: 0 190px 10px;
+}
+
+#app .container .introduction-title form p {
+    width: 800px;
+    margin: 0 190px;
+}
+
+#app .container .introduction-title input[type=submit] {
+    width: 100px;
+    color: #f5f5f5;
+    border-radius: 5px;
+    margin: 10px 520px;
+    letter-spacing: 4px;
+}
+
+
+/*
+*
+*   宽度在768px至1200px之间    
+*
+* /
+
+@media (min-width:768px) and (max-width:1200px) {
+    #app .header {
+        font-size: 1.8rem;
+    }
+    #header .AppDown,
+    #app .container .beautiful-article-right,
+    #app .header .hotTag .navOverFlow {
+        display: none;
+    }
+    #app .header .topNavInfo,
+    #app .container .beautiful-article .beautiful-article-info,
+    #app .container .beautiful-article .beautiful-article-model,
+    #app .container .arctile .beautiful-article .noPicture {
+        width: 100%
+    }
+    #app .header .topNavInfo .logo {
+        width: 9rem;
+        letter-spacing: .5rem;
+        font-size: 1.7rem;
+    }
+    #app .header .topNavInfo .TopNavList .searchInfo .form input[type=text] {
+        width: 14rem;
+    }
+    #app .header .hotTag dl {
+        width: 85rem;
+        margin-left: 2%;
+    }
+    #app .container .arctiles {
+        border-right: 0;
+    }
+    #app .container .arctiles,
+    #app .container .beautiful-article ul li {
+        width: 95%;
+        display: block;
+        margin: 0 auto;
+    }
+    #app .container .arctiles .beautiful-article .beautiful-article-model .beautiful-article-info .beautiful-article-img {
+        width: 25%;
+    }
+    #app .container .arctiles .beautiful-article .beautiful-article-model .beautiful-article-info .beautiful-article-info-content {
+        width: 73%;
+    }
+}
+*/
